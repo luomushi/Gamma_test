@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.Net调试 &mdash; Sky Code v1 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="2.Pid调试" href="pid.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Sky Code
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CA410.html">1.镜头</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pid.html">2.Pid调试</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3.Net调试</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sky Code</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3.Net调试</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/net.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="net">
+<h1>3.Net调试<a class="headerlink" href="#net" title="此标题的永久链接"></a></h1>
+<dl>
+<dt><strong>3.1参数配置</strong>:</dt><dd><p>参数的配置与 第2页Pid调试2.1. 参数配置 相同，这里就不做赘述。
+<a class="reference internal" href="pid.html"><span class="doc">如有需要点此查看详情</span></a></p>
+</dd>
+<dt><strong>3.2网络模型库</strong>:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">srcData_668nits</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 2</span>
+<span class="hll"><span class="linenos"> 3</span>    <span class="mi">771</span><span class="p">,</span><span class="mi">665</span><span class="p">,</span><span class="mi">841</span><span class="p">,</span><span class="mf">441.500807</span><span class="p">,</span><span class="mf">465.493631</span><span class="p">,</span><span class="mf">559.137249</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 4</span>    <span class="mi">771</span><span class="p">,</span><span class="mi">665</span><span class="p">,</span><span class="mi">911</span><span class="p">,</span><span class="mf">473.867607</span><span class="p">,</span><span class="mf">464.221478</span><span class="p">,</span><span class="mf">814.854431</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 5</span>    <span class="mi">771</span><span class="p">,</span><span class="mi">665</span><span class="p">,</span><span class="mi">981</span><span class="p">,</span><span class="mf">510.717535</span><span class="p">,</span><span class="mf">463.069248</span><span class="p">,</span><span class="mf">1105.271816</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 6</span>    <span class="mi">771</span><span class="p">,</span><span class="mi">725</span><span class="p">,</span><span class="mi">841</span><span class="p">,</span><span class="mf">480.752277</span><span class="p">,</span><span class="mf">625.001764</span><span class="p">,</span><span class="mf">555.071449</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 7</span>    <span class="mi">771</span><span class="p">,</span><span class="mi">725</span><span class="p">,</span><span class="mi">911</span><span class="p">,</span><span class="mf">512.772274</span><span class="p">,</span><span class="mf">621.381092</span><span class="p">,</span><span class="mf">808.318138</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 8</span>    <span class="mi">771</span><span class="p">,</span><span class="mi">725</span><span class="p">,</span><span class="mi">981</span><span class="p">,</span><span class="mf">548.329830</span><span class="p">,</span><span class="mf">616.283417</span><span class="p">,</span><span class="mf">1094.490414</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 9</span>    <span class="mi">771</span><span class="p">,</span><span class="mi">785</span><span class="p">,</span><span class="mi">841</span><span class="p">,</span><span class="mf">523.064184</span><span class="p">,</span><span class="mf">797.157526</span><span class="p">,</span><span class="mf">550.392056</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">10</span>    <span class="o">..................</span>
+</span><span class="hll"><span class="linenos">11</span>    <span class="c1">#由于数据太多这里就不全部展开</span>
+</span><span class="hll"><span class="linenos">12</span>    <span class="mi">71</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span><span class="mf">0.004032</span><span class="p">,</span><span class="mf">0.002454</span><span class="p">,</span><span class="mf">0.000049</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">13</span>    <span class="mi">71</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">167</span><span class="p">,</span><span class="mf">0.009334</span><span class="p">,</span><span class="mf">0.006371</span><span class="p">,</span><span class="o">-</span><span class="mf">0.000043</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">14</span>    <span class="mi">71</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">237</span><span class="p">,</span><span class="mf">0.040985</span><span class="p">,</span><span class="mf">0.039362</span><span class="p">,</span><span class="mf">0.009906</span><span class="p">,</span>
+</span><span class="linenos">15</span>
+<span class="linenos">16</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>将pid调试后跑出来的模型替换掉上面的模型库（黄色部分），其他不变。</p>
+</div>
+<p><strong>3.3 Net调试</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> - 函数说明:
+
+    def Gamma2_2_Net(gaDe,srcData,startReg=None,GAMMA_LEVEL=None,NumMax=50,setReg=None):
+
+    参数：
+        gaDe : 默认配置参数
+        srcData  :  网络模型库名称，（从网络模型库中获取对应的数据）
+        startReg :  设置初始RGB的值,可设可不设
+        GAMMA_LEVEL :  绑点
+        NumMax  :  每阶调试的次数，（默认50）
+        setReg  :  写入寄存器的函数接口
+    返回 :
+        -1 : 调试失败
+        outData : 调试成功则返回RGB的值
+
+- 使用实例:
+   outdates = Gamma2_2_Net(gaDe,srcData_668nits,GAMMA_LEVEL=GAMMA_LEVEL,NumMax=120,setReg = set_255_668nits)
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>该函数已经封装到run_net的函数，在调试Gamam的过程中不需要外部调用。</p>
+</div>
+<p><strong>3.4 跑 Net</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- 函数说明:
+
+    def run_net():
+
+    参数：无
+    返回 :无
+
+- 使用实例:
+
+   run_net()
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>调用函数前需要将以下部分配置全部好</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="c1">#默认的参数配置：</span>
+</span><span class="hll"><span class="linenos"> 2</span><span class="n">gaDe</span> <span class="o">=</span> <span class="n">GammaDesc</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos"> 3</span><span class="n">gaDe</span><span class="o">.</span><span class="n">maxLv</span> <span class="o">=</span> <span class="mi">668</span> <span class="c1">#目标亮度</span>
+</span><span class="hll"><span class="linenos"> 4</span><span class="c1"># gaDe.zeroLv = zeroxyz[0][2] #暗态亮度值(需要的客户赋值,不需要的设置为None)</span>
+</span><span class="hll"><span class="linenos"> 5</span><span class="n">gaDe</span><span class="o">.</span><span class="n">zeroLv</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 不需要的设置为None)</span>
+</span><span class="hll"><span class="linenos"> 6</span>
+</span><span class="hll"><span class="linenos"> 7</span><span class="n">gaDe</span><span class="o">.</span><span class="n">gamma</span> <span class="o">=</span> <span class="mf">2.2</span> <span class="c1">#目标gamma</span>
+</span><span class="hll"><span class="linenos"> 8</span><span class="n">gaDe</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.300</span>  <span class="c1">#目标x</span>
+</span><span class="hll"><span class="linenos"> 9</span><span class="n">gaDe</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.320</span>  <span class="c1">#目标y</span>
+</span><span class="hll"><span class="linenos">10</span>
+</span><span class="hll"><span class="linenos">11</span><span class="n">gaDe</span><span class="o">.</span><span class="n">register_max</span> <span class="o">=</span> <span class="mi">1023</span> <span class="c1">#寄存器最大值</span>
+</span><span class="hll"><span class="linenos">12</span><span class="n">gaDe</span><span class="o">.</span><span class="n">register_min</span> <span class="o">=</span><span class="mi">0</span>     <span class="c1">#寄存器最小值</span>
+</span><span class="hll"><span class="linenos">13</span>
+</span><span class="hll"><span class="linenos">14</span><span class="n">gaDe</span><span class="o">.</span><span class="n">pass_positive_dGamma</span> <span class="o">=</span> <span class="mf">0.03</span> <span class="c1">#客户+gamma</span>
+</span><span class="hll"><span class="linenos">15</span><span class="n">gaDe</span><span class="o">.</span><span class="n">pass_minus_dGamma</span> <span class="o">=</span> <span class="mf">0.03</span> <span class="c1">#客户-gamma</span>
+</span><span class="hll"><span class="linenos">16</span><span class="n">gaDe</span><span class="o">.</span><span class="n">calculate_positive_dGamma</span> <span class="o">=</span> <span class="mf">0.028</span> <span class="c1">#my+gamma</span>
+</span><span class="hll"><span class="linenos">17</span><span class="n">gaDe</span><span class="o">.</span><span class="n">calculate_minus_dGamma</span> <span class="o">=</span> <span class="mf">0.028</span> <span class="c1">#my-gamma</span>
+</span><span class="hll"><span class="linenos">18</span>
+</span><span class="hll"><span class="linenos">19</span><span class="n">gaDe</span><span class="o">.</span><span class="n">pass_positive_dxy</span> <span class="o">=</span> <span class="mf">0.00135</span> <span class="c1">#客户+xy</span>
+</span><span class="hll"><span class="linenos">20</span><span class="n">gaDe</span><span class="o">.</span><span class="n">pass_minus_dxy</span> <span class="o">=</span> <span class="mf">0.00135</span>    <span class="c1">#客户-xy</span>
+</span><span class="hll"><span class="linenos">21</span><span class="n">gaDe</span><span class="o">.</span><span class="n">calculate_positive_dxy</span> <span class="o">=</span><span class="mf">0.0013</span> <span class="c1">#my+xy</span>
+</span><span class="hll"><span class="linenos">22</span><span class="n">gaDe</span><span class="o">.</span><span class="n">calculate_minus_dxy</span> <span class="o">=</span><span class="mf">0.0013</span>    <span class="c1">#my-xy</span>
+</span><span class="hll"><span class="linenos">23</span>
+</span><span class="hll"><span class="linenos">24</span><span class="n">gaDe</span><span class="o">.</span><span class="n">dEMax</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#DE</span>
+</span><span class="hll"><span class="linenos">25</span>
+</span><span class="hll"><span class="linenos">26</span><span class="n">gaDe</span><span class="o">.</span><span class="n">gamma_err</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1">#上下两阶gamma限制(255不要用)</span>
+</span><span class="hll"><span class="linenos">27</span><span class="c1">#gaDe.special_value = 255 #有特殊要求的相邻两阶的值寄存器的值不超过多少的可以卡控一下</span>
+</span><span class="hll"><span class="linenos">28</span>
+</span><span class="linenos">29</span>
+<span class="linenos">30</span><span class="n">GAMMA_LEVEL</span> <span class="o">=</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">223</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="c1">#绑点对应灰阶值</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="c1">#每阶独立的参数配置，如255阶：</span>
+<span class="linenos">33</span>                         <span class="c1">#是否要调, 基础卡亮度   加强卡亮度  基础gamma卡控    加强gamma卡控  是否要和上阶gamma值进行约束    基础卡色坐标        加强卡色坐标       de卡控  设置的值,每次都会GRB减这个值</span>
+<span class="linenos">34</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">255</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span>   <span class="mf">3.34</span><span class="p">,</span> <span class="mf">3.34</span><span class="p">,</span>   <span class="mi">3</span><span class="p">,</span>   <span class="mi">3</span><span class="p">,</span>   <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>      <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>              <span class="kc">None</span><span class="p">,</span>          <span class="mf">0.00135</span><span class="p">,</span> <span class="mf">0.00135</span><span class="p">,</span>  <span class="mf">0.00130</span><span class="p">,</span> <span class="mf">0.00130</span><span class="p">,</span>    <span class="mf">0.5</span><span class="p">,</span>      <span class="kc">None</span><span class="p">)</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">127</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span>  <span class="kc">None</span><span class="p">,</span>  <span class="mf">0.00135</span><span class="p">,</span><span class="mf">0.00135</span><span class="p">,</span><span class="mf">0.00130</span><span class="p">,</span> <span class="mf">0.00130</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">37</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">111</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span>  <span class="kc">None</span><span class="p">,</span>  <span class="mf">0.00135</span><span class="p">,</span><span class="mf">0.00135</span><span class="p">,</span><span class="mf">0.00130</span><span class="p">,</span> <span class="mf">0.00130</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">38</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">95</span><span class="p">]</span>  <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span>  <span class="kc">None</span><span class="p">,</span>  <span class="mf">0.00135</span><span class="p">,</span><span class="mf">0.00135</span><span class="p">,</span><span class="mf">0.00130</span><span class="p">,</span> <span class="mf">0.00130</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">39</span><span class="c1"># gaDe.ld[47]  = GammaLevelDesc(1, None,None,None,None, 0.03,0.03,0.01,0.01,  None,  0.00135,0.00135,0.00130, 0.00130,0.8,None)</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.0015</span><span class="p">,</span><span class="mf">0.0015</span><span class="p">,</span><span class="mf">0.0012</span><span class="p">,</span><span class="mf">0.0012</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">42</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.0015</span><span class="p">,</span><span class="mf">0.0015</span><span class="p">,</span><span class="mf">0.0012</span><span class="p">,</span><span class="mf">0.0012</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.0018</span><span class="p">,</span><span class="mf">0.0018</span><span class="p">,</span><span class="mf">0.0012</span><span class="p">,</span><span class="mf">0.0012</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">46</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.0018</span><span class="p">,</span><span class="mf">0.0018</span><span class="p">,</span><span class="mf">0.0011</span><span class="p">,</span><span class="mf">0.0011</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">47</span>
+<span class="linenos">48</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">0.008</span><span class="p">,</span><span class="mf">0.008</span><span class="p">,</span><span class="mf">0.006</span><span class="p">,</span><span class="mf">0.006</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">49</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.08</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">50</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.08</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+<span class="linenos">51</span><span class="n">gaDe</span><span class="o">.</span><span class="n">ld</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">GammaLevelDesc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.08</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="linenos">52</span>
+<span class="linenos">53</span><span class="c1">#函数配置示例：</span>
+<span class="linenos">54</span><span class="n">outdates</span> <span class="o">=</span> <span class="n">Gamma2_2_Net</span><span class="p">(</span><span class="n">gaDe</span><span class="p">,</span><span class="n">srcData_668nits</span><span class="p">,</span><span class="n">GAMMA_LEVEL</span><span class="o">=</span><span class="n">GAMMA_LEVEL</span><span class="p">,</span><span class="n">NumMax</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span><span class="n">setReg</span> <span class="o">=</span> <span class="n">set_255_668nits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>3.5. 使用示例</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 初始化镜头</span>
+<span class="n">CA410_Init</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># 跑Net</span>
+<span class="n">run_net</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="pid.html" class="btn btn-neutral float-left" title="2.Pid调试" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2023, Sky Code.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
