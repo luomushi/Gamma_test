@@ -46,7 +46,7 @@ html_static_path = ['_static']
 
 # html_copy_source=False  # 关闭右上角的查看源码
 # html_copy_source=False  # 关闭右上角的查看源码
-# html_copy_source=False  # 关闭右上角的查看源码
+html_copy_source=False  # 关闭右上角的查看源码
 html_show_sphinx = False
 
 html_favicon = '../picture/favicon.jpg'
