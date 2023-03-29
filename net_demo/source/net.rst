@@ -26,7 +26,7 @@
 
         ]
 
-.. 注意:: 
+.. attention:: 
 
     将pid调试后跑出来的模型替换掉上面的模型库（黄色部分），其他不变。
 
@@ -51,7 +51,9 @@
     - 使用实例:
        outdates = Gamma2_2_Net(gaDe,srcData_668nits,GAMMA_LEVEL=GAMMA_LEVEL,NumMax=120,setReg = set_255_668nits)
 
-.. 提示:: 该函数已经封装到run_net的函数，在调试Gamam的过程中不需要外部调用。
+.. hint:: 
+
+    该函数已经封装到run_net的函数，在调试Gamam的过程中不需要外部调用。
 
 
 **3.4 跑 Net**::
@@ -66,7 +68,10 @@
     - 使用实例:
 
        run_net()
-.. 注解:: 调用函数前需要将以下部分配置全部好
+.. note:: 
+
+    调用函数前需要将以下部分配置全部好
+
 
     .. code-block:: python
         :emphasize-lines: 0-28
