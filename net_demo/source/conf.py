@@ -36,7 +36,7 @@ language = 'zh_CN'
 #html_theme = 'alabaster'
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_copy_source=False  # 关闭右上角的查看源码
+html_copy_source=True  # 关闭右上角的查看源码
 
 html_favicon = '../picture/favicon.jpg'
 
