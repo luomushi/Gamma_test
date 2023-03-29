@@ -65,9 +65,13 @@
             special_value: Any | None = None   #对于只卡gamma2.2的, 不对色坐标有要求的,调不过时 可以设置这个,设置的值,每次都会GRB减这个值
         )
 
-.. attention:: 如果对应的阶有进行独立的参数配置则跑独立的参数配置（白色部分），没有则跑默认的参数配置（黄色部分）。
+.. attention:: 
 
-.. note:: 在调试Gammma前需要将各个参数进行配置。示例如下：
+    如果对应的阶有进行独立的参数配置则跑独立的参数配置（白色部分），没有则跑默认的参数配置（黄色部分）。
+
+.. note:: 
+
+    在调试Gammma前需要将各个参数进行配置。示例如下：
 
 .. code-block:: python
     :emphasize-lines: 0-28
@@ -124,7 +128,9 @@
     gaDe.ld[3] = GammaLevelDesc(1,None,None,None,None,0.09,0.09,0.08,0.09, None, None,None,None,None,None, None)
     gaDe.ld[1] = GammaLevelDesc(1,None,None,None,None,0.09,0.09,0.08,0.09, None, None,None,None,None,None, 1)
 
-.. attention:: 如果对应的阶有进行独立的参数配置则跑独立的参数配置（白色部分），没有则跑默认的参数配置（黄色部分）。
+.. attention::
+
+    如果对应的阶有进行独立的参数配置则跑独立的参数配置（白色部分），没有则跑默认的参数配置（黄色部分）。
 
 
 **2.2. Pid调试** ::
@@ -148,7 +154,9 @@
 
        outData = Gamma2_2_PID(gaDe,P=0.3,startReg=[846, 734, 919],GAMMA_LEVEL=GAMMA_LEVEL,NumMax=150,setReg = set_255_668nits)
        
-.. hint:: 该函数已经封装到调run_pid的函数，在调试Gamam的过程中不需要外部调用。
+.. hint::
+
+    该函数已经封装到调run_pid的函数，在调试Gamam的过程中不需要外部调用。
 
 .. _my-reference-label:
 **2.3. 跑 Pid** ::
@@ -166,7 +174,10 @@
 
        2. run_pid(1)    # 跑模型
 
-.. note:: 调用函数前需要将以下部分配置全部好
+.. note:: 
+
+    调用函数前需要将以下部分配置全部好
+    
 
     .. code-block:: python
         :emphasize-lines: 0-28
@@ -241,7 +252,9 @@
                                                None或0则不卡   None或0则不卡   None或0则不卡   None或0则不卡                                None或0则不卡           None或0则不卡
     ============  =============== ===========  =============  ============= ============== =============== =========================== =====================  ====================  ===========  ===========================
 
-.. important:: 注意在跑Pid期间,请确保屏幕是亮的
+.. important:: 
+
+    注意在跑Pid期间,请确保屏幕是亮的
 
 
 **2.4. 使用示例** ::
