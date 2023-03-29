@@ -19,6 +19,11 @@ extensions = [
     # 'sphinx_markdown_tables'
 ]
 
+html_context = {
+  "display_github": False, # Add 'Edit on Github' link instead of 'View page source'
+  "last_updated": True,
+  "commit": False,
+}
 
 templates_path = ['_templates']
 exclude_patterns = []
